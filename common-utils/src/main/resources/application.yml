@@ -1,0 +1,21 @@
+server:
+  port: 10511
+spring:
+  application:
+    name: common-utils
+  #发送邮件
+  mail:
+    host: smtp.qq.com               #邮件服务器地址,以qq邮箱为例
+    username: 1647731302@qq.com     #发件人邮箱地址
+    password: kbzfyackyjoacdja      #这个密码是邮箱设置里SMTP服务生成的授权码
+    default-encoding: UTF-8
+  #thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/   #prefix:指定模板所在的目录
+    check-template-location: true   #check-template-location:检查模板路径是否存在
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    mode: HTML5                     #用非严格的HTML
+    cache: false                    #cache:是否缓存,开发模式下设置为false,避免改了模板还要重启服务器,线上设置为true,可以提高性能
